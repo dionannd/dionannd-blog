@@ -22,7 +22,7 @@ type PostProps = {
 export default function Post({ post, related }: PostProps) {
   const seoTitle = `${post.title} | Dian Ananda`;
   const seoDesc = `${post.summary}`;
-  const url = `https://dion-blog.vercel.app/blog/${post.slug}`;
+  const url = `https://blog.dianananda.site/blog/${post.slug}`;
   const Component = useMDXComponent(post.body.code);
 
   return (
@@ -38,8 +38,8 @@ export default function Post({ post, related }: PostProps) {
           images: [
             {
               url: post.og
-                ? `https://dion-blog.vercel.app${post.og}`
-                : `https://og-image.samuelkraft.vercel.app/${encodeURIComponent(
+                ? `https://blog.dianananda.site${post.og}`
+                : `https://og-dion.vercel.app/${encodeURIComponent(
                     post.title
                   )}?desc=${encodeURIComponent(seoDesc)}&theme=dark.png`,
               alt: post.title,
@@ -57,40 +57,14 @@ export default function Post({ post, related }: PostProps) {
 
       <div className="flex flex-col gap-20">
         <article>
-          {post.slug === "spring-parallax-framer-motion-guide" ? (
-            <div className="relative h-0 pb-[50%] bg-[#00000c] overflow-hidden rounded-xl">
-              <div className="absolute inset-0">
-                <Parallax offset={100}>
-                  <Image
-                    src="/blog/spring-parallax-framer-motion-guide/bg.png"
-                    width="2024"
-                    height="1272"
-                    alt="Starry sky"
-                    sizes="(min-width: 480px) 780px, 100vw"
-                    className="w-full min-h-screen"
-                  />
-                </Parallax>
-              </div>
-              <div className="absolute top-1/2 left-1/2 w-[50px] h-[50px] -translate-x-1/2 -translate-y-1/2 md:w-[120px] md:h-[120px]">
-                <Image
-                  src="/blog/spring-parallax-framer-motion-guide/logo.png"
-                  width="324"
-                  height="324"
-                  alt="Framer Motion stylized logo"
-                  sizes="(min-width: 540px) 120px, 50px"
-                />
-              </div>
-            </div>
-          ) : (
-            <Image
-              src={post.image}
-              alt={`${post.title} post image`}
-              width={700}
-              height={350}
-              className="w-[calc(100%+32px)] -ml-4 md:rounded-xl max-w-none border  border-primary"
-              priority
-            />
-          )}
+          <Image
+            src={post.image}
+            alt={`${post.title} post image`}
+            width={700}
+            height={350}
+            className="w-[calc(100%+32px)] -ml-4 md:rounded-xl max-w-none border  border-primary"
+            priority
+          />
           <div className="h-8" />
           <div className="flex flex-col gap-3">
             <h1 className="text-2xl font-semibold">{post.title}</h1>

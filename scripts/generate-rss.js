@@ -7,8 +7,8 @@ const matter = require("gray-matter");
 async function generate() {
   const feed = new RSS({
     title: "Dian Ananda",
-    site_url: "https://dion-blog.vercel.app",
-    feed_url: "https://dion-blog.vercel.app/feed.xml",
+    site_url: "https://blog.dianananda.site",
+    feed_url: "https://blog.dianananda.site/feed.xml",
   });
 
   const posts = await fs.readdir(path.join(__dirname, "..", "data", "blog"));
@@ -22,7 +22,7 @@ async function generate() {
 
       feed.item({
         title: frontmatter.data.title,
-        url: "https://dion-blog.vercel.app/blog/" + name.replace(/\.mdx?/, ""),
+        url: "https://blog.dianananda.site/blog/" + name.replace(/\.mdx?/, ""),
         date: frontmatter.data.publishedAt,
         description: frontmatter.data.summary,
       });

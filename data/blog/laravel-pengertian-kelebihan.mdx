@@ -1,0 +1,64 @@
+---
+title: "Laravel - Pengertian, Kelebihan, dan Kekurangan"
+publishedAt: "2020-08-23"
+updatedAt: "2023-03-06"
+summary: "WWhat is about laravel?"
+tags: ["Laravel", "Tech"]
+---
+
+Apa itu Laravel? mari kita mulai pembahasan nya.
+
+## Pengertian Laravel
+
+**Laravel** adalah sebuah framework PHP yang dirilis dibawah lisensi MIT, dibangun dengan konsep **MVC** (model view controller). Laravel adalah pengembangan website berbasis MVP yang ditulis dalam PHP yang dirancang untuk meningkatkan kualitas perangkat lunak dengan mengurangi biaya pengembangan awal dan biaya pemeliharaan, dan untuk meningkatkan pengalaman bekerja dengan aplikasi dengan menyediakan sintaks yang ekspresif, jelas dan menghemat waktu.
+
+**MVC** adalah sebuah pendekatan perangkat lunak yang memisahkan aplikasi logika dari presentasi. MVC memisahkan aplikasi berdasarkan komponen- komponen aplikasi, seperti : manipulasi data, controller, dan user interface.
+
+1. **Model**, Model mewakili struktur data. Biasanya model berisi fungsi-fungsi yang membantu seseorang dalam pengelolaan basis data seperti memasukkan data ke basis data, pembaruan data dan lain-lain.
+
+2. **View**, View adalah bagian yang mengatur tampilan ke pengguna. Bisa dikatakan berupa halaman web.
+
+3. **Controller**, Controller merupakan bagian yang menjembatani model dan view.
+
+Beberapa fitur yang terdapat di Laravel :
+
+- Eloquent ORM, merupakan penerapan PHP lanjutan menyediakan metode internal dari pola “active record” yang menagatasi masalah pada hubungan objek database.
+- Application Logic, merupakan bagian dari aplikasi, menggunakan controller atau bagian Route.
+- Restful controllers, memisahkan logika dalam melayani HTTP GET and POST.
+- Reverse Routing, mendefinisikan relasi atau hubungan antara Link dan Route.
+- Class Auto Loading, menyediakan loading otomatis untuk class PHP.
+- View Composer, adalah kode unit logikal yang dapat dieksekusi ketika view sedang loading.
+- Migration, menyediakan sistem kontrol untuk skema database.
+- Automatic Pagination, menyederhanakan tugas dari penerapan halaman.
+
+## Kelebihan Laravel
+
+- Waktu yang dibutuhkan untuk mengembangan projek website dengan menggunakan framework ini menjadi lebih cepat.
+- Dapat meningkatkan pengunjung webiste karena teknologi framework ini dapat digunakan di segala browser dan berbagai perangkat dengan baik.
+- Laravel dilengkapi dengan utilitas pemrograman untuk membantu proses pengembangan aplikasi web dan juga moderasi dengan cara terbaik. Ini dikemas dengan Modular Packaging System (MPS) dengan pengaturan ketergantungan yang lengkap.
+
+Untuk menggunakan Laravel itu sendiri pengguna dibutuhkan untuk melakukan penginstalan sebuah composer.Composer adalah alat manajemen dependency pada PHP seperti npm(Node.js) dan Bundler(Ruby).Composer memungkinkan untuk membuat library pada project anda dan composer sendiri akan menginstall atau mengupdate secara otomatis tanpa anda harus menginstall manual.
+
+## Kekurangan Laravel
+
+1. **Tidak Mudah memahami untuk pertama kali**
+
+   Buat para beginner yang memahami laravel relatif akan kesulitan. sebab laravel tidak semudah codeigniter untuk dipahami. untuk masuk ke pintu gerbang nya diperlukan fokus agar bisa memahami laravel. Terlebih buat yang baru belajar Framework. Akan terbantu bila pernah belajar Framework sebelumnya seperti Codeigniter. jangankan untuk memahami alurnya, untuk install pertama kali pun kalau para beginner bisa dibuat bingung. karena cara install yang modern.
+
+2. **Update versi terlalu cepat**
+
+   Update Laravel cepat bahkan menurut saya terlalu cepat. Sehingga bagi yang tidak mengikuti perkembangan laravel bisa ketinggalan jauh. Dan perubahan fitur nya pun terbilang signifikan. Terlebih yang dari versi 4 ke versi 5, sangat signifikan perubahannya baik fitur maupun struktur folder nya. Versi 5 pun cepat update versinya, sekarang saat saya menulis ini sudah sampai versi 5.5.
+
+3. **Install di Server tidak semudah Codeigniter**
+
+   Bila Install codeigniter di ftp tinggal upload dan ubah konfigurasi database, maka install Laravel tidak semudah itu. Apabila kita sewa hosting di tempat lain, kita harus punya akses putty ke server agar bisa install composer. Untuk apa composer? Untuk kita menjalankan perintah.
+
+   ```bash
+   composer update
+   ```
+
+   Kenapa kita jalankan perintah itu, karena beda lingkungan OS beda sistem laravel. untuk itu jika kita membuat aplikasi di windows maka saat di upload di server Linux kita perlu jalankan perintah diatas untuk update di root aplikasi agar laravel bisa menyesuaikan lingkungan OS yang baru.
+
+4. **Relatif lebih berat**
+
+   **Laravel** relatif lebih berat bila dibanding dengan framework Codeigniter. Hal ini wajar karena laravel meload banyak file dan asset untuk menjalankan aplikasinya.Tapi hal ini sudah ditanggulangi oleh Laravel 5 yang sudah menyederhanakan dari laravel versi 4 yang berat.

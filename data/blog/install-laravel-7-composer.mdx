@@ -1,0 +1,86 @@
+---
+title: "Cara Install Laravel 7 dengan Composer"
+publishedAt: "2020-08-26"
+updatedAt: "2023-03-06"
+summary: "How to install laravel 7 with Composer"
+tags: ["Laravel", "Composer", "Tutorial"]
+---
+
+Laravel menjadi framework PHP yang cukup populer dikalangan web developer. da beberapa versi yang sampai saat ini masih disupport oleh Laravel, yaitu 5.5, 5.6, 5.7, 5.8, 6, dan yang terbaru 7. Anda bisa melihat detail lengkap nya diwebsite resminya [Laravel](https://laravel.com).
+
+Meski tidak banyak perubahan, namun ada beberapa fitur tambahan di Laravel 7 ini, admin juga masih belajar mengenai laravel, mari kita sama-sama belajar framework ini agar sama sama bisa paham.
+
+Mari kita mulai pembelajaran pertama yaitu installasi untuk mengerjakan project menggunakan Laravel.
+
+## System Requiretment Laravel 7
+
+Framework Laravel memiliki beberapa persyaratan sistem requiretment. Semua persyaratan ini perlu dipenuhi oleh mesin virtual Laravel Homestead. Jadi sangat disarankan menggunakan Homestead sebagai pengembangan aplikasi Laravel kita. Jika tidak menggunakan Homestead, kita harus memastikan server memenuhi persyaratan berikut:
+
+- PHP >= 7.2.5
+- BCMath PHP Extension
+- Ctype PHP Extension
+- Fileinfo PHP Extension
+- JSON PHP Extension
+- Mbstring PHP Extension
+- Openssl PHP Extension
+- PDO PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
+
+Jika sudah, kita akan melanjutkan ke tahap installasi Laravel 7.
+
+## Tools yang Perlu Disiapkan Saat Install Laravel 7
+
+1. [Composer](https://getcomposer.org/download/)
+2. Web Server (ex: XAMPP, Nginsx, WAMP, Laragon)
+
+## Cara Install Laravel 7 dengan Composer
+
+Ada 2 cara untuk menginstall Laravel 7 dengan Composer.
+
+## Cara 1 – Via Laravel Installer
+
+1. Ketik command berikut ini di teminal:
+
+```shell
+composer global require laravel/installer
+```
+
+2. Setelah selesai, ketik command berikut ini:
+
+```shell
+laravel new nama_project
+```
+
+Maksud dari `composer global require laravel/installer` adalah menambahkan Laravel installer di komputer kita. Sehingga kita tidak perlu lagi dengan cara composer create-project cukup dengan cara diatas.
+
+## Cara 2 – Melalui Composer create Project
+
+Kita juga dapat menginstall Laravel 7 dengan mengetik command dibawah ini:
+
+```bash
+composer create-project --prefer-dist laravel/laravel nama_project
+```
+
+## Cara Running Laravel 7
+
+Setelah melakukan installasi, kini saatnya untuk mencoba running project yang kita buat. Silahkan masuk ke directory project, kemudian buka terminal dan ketik:
+
+```shell
+php artisan serve
+```
+
+Jika berhasil, silahkan buka URL dibawah ini melalui browser favorit Anda:
+
+```shell
+http://localhost:8000
+```
+
+## Apa Selanjutnya ?
+
+Setelah selesai menginstall Laravel 7, masih banyak yang akan dibahas selanjutnya tentang Laravel 7, seperti:
+
+- CRUD Laravel 7
+- Install Bootstrap 4 di Laravel 7
+- Integerasi VueJS di Laravel 7
+- dll.
