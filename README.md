@@ -1,6 +1,6 @@
-# samuelkraft.com
+# Dion's Personal Blog
 
-My personal website/portfolio/blog.
+My personal blog.
 
 ## Stack
 
