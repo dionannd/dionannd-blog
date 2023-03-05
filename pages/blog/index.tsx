@@ -31,9 +31,9 @@ export default function Blog({ posts }: BlogProps) {
         description={seoDesc}
         openGraph={{
           title: seoTitle,
-          url: `https://samuelkraft.com/blog/`,
+          url: `https://dion-blog.vercel.app/blog/`,
           description: seoDesc,
-          site_name: "Samuel Kraft",
+          site_name: "Dian Ananda",
         }}
         twitter={{
           cardType: "summary_large_image",
@@ -47,7 +47,7 @@ export default function Blog({ posts }: BlogProps) {
               className="text-secondary animate-in"
               style={{ "--index": 1 } as React.CSSProperties}
             >
-              I write about CSS, animation techniques, design systems and more.
+              Search content.
             </p>
           </div>
           <div

@@ -9,7 +9,6 @@ import HitCounter from "components/hitcounter";
 import PostList from "components/postlist";
 import Link from "components/Link";
 import Image from "next/image";
-import NewsletterInput from "components/NewsletterInput";
 import Tags from "components/tags";
 import LikeButton from "components/likebutton";
 import MDXComponents from "components/MDXComponents";
@@ -21,9 +20,9 @@ type PostProps = {
 };
 
 export default function Post({ post, related }: PostProps) {
-  const seoTitle = `${post.title} | Samuel Kraft`;
+  const seoTitle = `${post.title} | Dian Ananda`;
   const seoDesc = `${post.summary}`;
-  const url = `https://samuelkraft.com/blog/${post.slug}`;
+  const url = `https://dion-blog.vercel.app/blog/${post.slug}`;
   const Component = useMDXComponent(post.body.code);
 
   return (
@@ -39,19 +38,19 @@ export default function Post({ post, related }: PostProps) {
           images: [
             {
               url: post.og
-                ? `https://samuelkraft.com${post.og}`
+                ? `https://dion-blog.vercel.app${post.og}`
                 : `https://og-image.samuelkraft.vercel.app/${encodeURIComponent(
                     post.title
                   )}?desc=${encodeURIComponent(seoDesc)}&theme=dark.png`,
               alt: post.title,
             },
           ],
-          site_name: "Samuel Kraft",
+          site_name: "Dian Ananda",
           type: "article",
           article: {
             publishedTime: post.publishedAt,
             modifiedTime: post.updatedAt,
-            authors: ["https://samuelkraft.com"],
+            authors: ["https://dianananda.site"],
           },
         }}
       />
