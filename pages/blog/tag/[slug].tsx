@@ -19,8 +19,8 @@ const Tag = ({ posts }: TagProps): JSX.Element => {
   const tag = slug.replace("-", " ");
 
   const seoTitle = `${tag} | Dian Ananda`;
-  const seoDesc = `Posts &amp; tutorials about ${tag}`;
-  const url = `https://samuelkraft.com/blog/tag/${tag}`;
+  const seoDesc = `Posts &amp; all about ${tag}`;
+  const url = `https://blog.dianananda.site/blog/tag/${tag}`;
 
   return (
     <>
@@ -42,8 +42,7 @@ const Tag = ({ posts }: TagProps): JSX.Element => {
               className="text-secondary animate-in"
               style={{ "--index": 1 } as React.CSSProperties}
             >
-              Posts &amp; tutorials about{" "}
-              <span className="capitalize">{tag}</span>
+              Posts &amp; all about <span className="capitalize">{tag}</span>
             </p>
           </div>
         </div>

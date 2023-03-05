@@ -7,9 +7,8 @@ import Input from "components/input";
 import { useState } from "react";
 import { IconSearch } from "components/Icons";
 
-const seoTitle = "Blog | Samuel Kraft";
-const seoDesc =
-  "I write about development, design, React, CSS, animation and more!";
+const seoTitle = "Blog | Dian Ananda";
+const seoDesc = "I write about whatever i want to write about!";
 
 type BlogProps = {
   posts: Post[];
@@ -31,7 +30,7 @@ export default function Blog({ posts }: BlogProps) {
         description={seoDesc}
         openGraph={{
           title: seoTitle,
-          url: `https://dion-blog.vercel.app/blog/`,
+          url: `https://blog.dianananda.site/blog/`,
           description: seoDesc,
           site_name: "Dian Ananda",
         }}
@@ -42,7 +41,7 @@ export default function Blog({ posts }: BlogProps) {
       <div className="flex flex-col gap-20">
         <div className="flex flex-col gap-3.5">
           <div className="flex flex-col gap-2">
-            <h1 className="animate-in">Blog</h1>
+            <h1 className="animate-in">All posts</h1>
             <p
               className="text-secondary animate-in"
               style={{ "--index": 1 } as React.CSSProperties}

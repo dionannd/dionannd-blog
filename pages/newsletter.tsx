@@ -1,15 +1,10 @@
 import NewsletterInput from "components/NewsletterInput";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
-import { allPosts, Post } from ".contentlayer/generated";
-import { GetStaticProps } from "next";
-import { pick } from "contentlayer/client";
-import PostList from "components/postlist";
-import Link from "components/Link";
 
 export default function NewsletterPage() {
   const { query } = useRouter();
-  const seoTitle = "Newsletter | Samuel Kraft";
+  const seoTitle = "Newsletter | Dian Ananda";
   const seoDesc =
     "A newsletter in the realm between design & development. Learn animations, CSS, web development tips & tricks and creating delightful and useful interfaces!";
 
@@ -20,9 +15,9 @@ export default function NewsletterPage() {
         description={seoDesc}
         openGraph={{
           title: seoTitle,
-          url: `https://samuelkraft.com/newsletter/`,
+          url: `https://blog.dianananda.site/newsletter/`,
           description: seoDesc,
-          site_name: "Samuel Kraft",
+          site_name: "Dian Ananda",
         }}
         twitter={{
           cardType: "summary_large_image",

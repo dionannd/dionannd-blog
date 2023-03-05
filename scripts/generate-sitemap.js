@@ -7,7 +7,7 @@ function addPage(page) {
   const route = path === "/index" ? "" : path;
 
   return `  <url>
-    <loc>${`https://dion-blog.vercel.app}${route}`}</loc>
+    <loc>${`https://blog.dianananda.site}${route}`}</loc>
     <changefreq>hourly</changefreq>
   </url>`;
 }
