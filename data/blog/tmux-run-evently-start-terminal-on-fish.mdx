@@ -1,0 +1,21 @@
+---
+title: "Run Tmux on Fish Shell evently Start the Terminal"
+publishedAt: "2022-08-18"
+summary: "Run Tmux evently Start the Terminal"
+tags: ["Fish", "Tmux", "Terminal"]
+---
+
+How to configure fish config to run tmux automatically evently start the terminal.
+Add new config in file `~/.config/fish/config.fish` , and type:
+
+```shell
+if not set -q TMUX
+    set -g TMUX tmux new-session -d -s fish
+    eval $TMUX
+    tmux attach-session -d -t fish
+end
+```
+
+This scripts will check the availability of shell variable TMUX. If not available, fish will set the variable and run it with eval commands. Then tmux will attach to the newly created session.
+
+The newly created session created with a name `fish`.
