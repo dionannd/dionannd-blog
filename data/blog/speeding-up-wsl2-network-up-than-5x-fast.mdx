@@ -1,0 +1,90 @@
+---
+title: "Speeding up WSL2 Network up than 5x fast"
+publishedAt: "2020-08-29"
+summary: "Speeding up WSL2 Network up than 5x fast"
+tags: ["Windows", "WSL 2", "Linux", "Ubuntu"]
+---
+
+If you would have told me I’d be writing an article about how to fix download speed in WSL2 while developing in Windows I would have laughed! The thought of me turning to Windows for my dev environment was just never going to happen.
+
+I had my trusty Macbook Pro for developing at work and my Ubuntu installation on my home PC. Developing on Windows is for noobs… Oh, how I was wrong.
+
+Anyway moving on from that, moving to [WSL2](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) on my Windows machine has been a surprisingly great experience. From the great integration with Visual Studio Code and being able to use Docker with ease. One thing that has been a pain in the ass has been my download speed. If you are having the same issue, keep reading I’ll explain the fix
+
+```
+[2 gnupg1 93.8 kB/556 kB 17%] 6266 B/s 2min 35s
+```
+
+Above is literally what the speed was when downloading the Speedtest CLI tool and here is what my speed should have been!
+
+<Image
+  alt="No slow downloads here"
+  caption="No slow downloads here"
+  src={"/speeding-up-wsl2-network-up-than-5x-fast/network.png"}
+  width={680}
+  height={115}
+/>
+
+## The Fix
+
+There is a feature on some Network Adapters called Large Send Offload. This is enabled by default for both IPv4 and IPv6. It essentially blocks TCP from partitioning large data packets into smaller packets.
+
+To disable this you need to configure the WSL vEthernet adapter (Also any adapter you are using, so docker ones too)
+
+1. Press the Windows Key and type “Control Panel” -> “Network and Internet” -> “View network status and tasks”
+
+   <Image
+     alt="Network and Sharing Centre"
+     caption="Network and Sharing Centre"
+     src={"/speeding-up-wsl2-network-up-than-5x-fast/network-and-sharing.webp"}
+     width={645}
+     height={120}
+   />
+
+2. Click “Change adapter settings”
+
+   <Image
+     alt="Change adapter settings"
+     caption="Change adapter settings"
+     src={"/speeding-up-wsl2-network-up-than-5x-fast/adapter-setting.png"}
+     width={183}
+     height={126}
+   />
+
+3. Find the “vEthernet (WSL)” adapter and click properties
+
+   <Image
+     alt="vEthernet (WSL) properties"
+     caption="vEthernet (WSL) properties"
+     src={"/speeding-up-wsl2-network-up-than-5x-fast/vethernet-wsl.webp"}
+     width={489}
+     height={273}
+   />
+
+4. Click “configure” and open the advanced tab
+
+   <Image
+     alt="Virtual ethernet adapter properties properties"
+     caption="Virtual ethernet adapter properties properties"
+     src={
+       "/speeding-up-wsl2-network-up-than-5x-fast/vethernet-adapter-properties.webp"
+     }
+     width={394}
+     height={453}
+   />
+
+Select “Large Send Offload Version 2 (IPv4)” and change the drop-down to disabled. To the same for “Large Send Offload Version 2 (IPv6)”.
+
+Once this is done click “OK” and you are all done. You may experience a slight downtime in connection while this is saved.
+
+## Takeaway
+
+With this internet issue out the way, I can carry on developing in Windows. Still can’t get used to saying that…
+
+<Image
+  alt="Network Speed"
+  caption="Network Speed"
+  src={"/speeding-up-wsl2-network-up-than-5x-fast/network-speed-fix.png"}
+  width={467}
+  height={68}
+/>
