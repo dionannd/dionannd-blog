@@ -28,7 +28,7 @@
     "random-words": "^1.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rehype-prism-plus": "^1.5.0",
+    "rehype-prism-plus": "^1.5.1",
     "remark-code-titles": "^0.1.2",
     "sass": "^1.58.3",
     "slugify": "^1.6.5",
