@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="google-site-verification"
-            content="RJQJipgMnyEfg3XESXsr7jXnVDOaAr1xtlCGRaoTQSo"
+            content="oGMcQ3blcc6X_PKLS4qMOfah9a-QYb4oDzroIt_sKUQ"
           />
           <link
             rel="webmention"
