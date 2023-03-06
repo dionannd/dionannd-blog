@@ -4,7 +4,6 @@ import Section from "./Section";
 import Link from "./Link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import React from "react";
 
 type PostProps = {
   post: Post;

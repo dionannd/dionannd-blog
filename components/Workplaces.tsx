@@ -12,7 +12,7 @@ type Workplace = {
 
 function Workplace({ title, description, imageSrc, time, link }: Workplace) {
   const content = (
-    <>
+    <Fragment>
       <div className="flex items-center gap-4">
         <Image
           src={imageSrc}
@@ -27,7 +27,7 @@ function Workplace({ title, description, imageSrc, time, link }: Workplace) {
         </div>
       </div>
       {time && <p className="text-secondary">{time}</p>}
-    </>
+    </Fragment>
   );
   return (
     <li className="transition-opacity" key={description}>

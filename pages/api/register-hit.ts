@@ -27,7 +27,10 @@ export default async function handler(
   if (!doesDocExist) {
     await client.query(
       q.Create(q.Collection("hits"), {
-        data: { slug, hits: 0 },
+        data: {
+          slug,
+          hits: 0,
+        },
       })
     );
   }

@@ -25,7 +25,10 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   if (!doesDocExist) {
     await client.query(
       q.Create(q.Collection("likes"), {
-        data: { slug, likes: 0 },
+        data: {
+          slug,
+          likes: 0,
+        },
       })
     );
   }

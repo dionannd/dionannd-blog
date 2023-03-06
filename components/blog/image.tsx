@@ -36,7 +36,7 @@ export default function CustomImage({
           width={width}
           height={height}
           alt={alt}
-          className="w-full h-auto"
+          className="w-full h-auto rounded-lg"
           priority={priority}
         />
         {caption && (
