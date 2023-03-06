@@ -12,7 +12,6 @@ import Image from "next/image";
 import Tags from "components/tags";
 import LikeButton from "components/likebutton";
 import MDXComponents from "components/MDXComponents";
-import Parallax from "components/blog/parallax";
 
 type PostProps = {
   post: PostType;
