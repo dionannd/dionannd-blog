@@ -37,11 +37,7 @@ export default function LikeButton({ slug }: { slug: string }) {
           strength={30}
         >
           {liked ? <IconHeart /> : <IconHeartOutline />}{" "}
-          {typeof likes === "undefined" ? (
-            "--"
-          ) : (
-            <FlipNumber>{likes}</FlipNumber>
-          )}
+          {typeof likes === "undefined" ? 0 : <FlipNumber>{likes}</FlipNumber>}
         </Halo>
       </button>
     </div>

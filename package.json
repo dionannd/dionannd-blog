@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prod": "next build && next start",
     "lint": "next lint",
     "type-check": "./node_modules/.bin/tsc",
     "cache-clear": "./node_modules/.bin/contentlayer build --verbose --clearCache"
