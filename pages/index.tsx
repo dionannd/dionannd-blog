@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async () => {
       (a, b) =>
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     )
-    .filter((_, i) => i < 4)
+    .filter((_, i) => i < 5)
     .map((post) => pick(post, ["slug", "title", "publishedAt", "image"]));
 
   const projects = allProjects.map((post) =>

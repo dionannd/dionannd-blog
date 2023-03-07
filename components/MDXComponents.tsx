@@ -5,6 +5,7 @@ import Link from "components/Link";
 import Warning from "components/warning";
 import SegmentedControl from "components/blog/segmentedcontrol";
 import Parallax from "components/blog/parallax";
+import Greeting from "components/blog/greeting";
 
 interface CustomLinkProps
   extends React.DetailedHTMLProps<
@@ -36,6 +37,7 @@ const MDXComponents = {
   Warning: Warning,
   SegmentedControl: SegmentedControl,
   Parallax: Parallax,
+  Greeting: Greeting,
 };
 
 export default MDXComponents;

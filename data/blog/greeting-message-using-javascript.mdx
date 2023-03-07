@@ -1,0 +1,46 @@
+---
+title: "Greet your Visitors with Good Morning, Good Afternoon or Good Evening Message using JavaScript"
+publishedAt: "2020-09-15"
+summary: "Greeting your visitors with JavaScript"
+tags: ["JavaScript", "JS", "HTML"]
+---
+
+We have seen websites greeting their visitors with a message that says Good morning, good afternoon or good evening, depending upon the time they visit the website. In fact, these are simple client scripts, which read the active visitors computer’s time. Here, in this article, I’ll show you how to greet your website visitors with a message. This article and the examples are for beginners.
+
+As little kids, we were taught how to greet our guests, family and friends depending upon the time of the day. I need not repeat it here, because you all are grown up now. However, we need to make our web page understand these courtesies and greet ours visitors accordingly.
+
+## The Markup
+
+In our markup section, we have added a `<label>` to display the message. However, you may also use `document.write()` method for the same.
+
+```html
+<html>
+  <head>
+    <title>Greeting Message</title>
+  </head>
+  <body>
+    <label id="greeting"></label>
+  </body>
+  <script>
+    var date = new Date();
+    var hours = date.getHours();
+
+    var greet;
+
+    if (hours < 12) {
+      greet = "Good Morning";
+    } else if (hours >= 12 && hours <= 17) {
+      greet = "Good Afternoon";
+    } else if (hours >= 17 && hours <= 24) {
+      greet = "Good Evening";
+    }
+
+    document.getElementById("greeting").innerHTML =
+      "<b>" + greet + "</b> and welcome to my blog.";
+  </script>
+</html>
+```
+
+example:
+
+<Greeting>and the result</Greeting>
