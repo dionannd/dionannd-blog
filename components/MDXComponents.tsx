@@ -6,6 +6,7 @@ import Warning from "components/warning";
 import SegmentedControl from "components/blog/segmentedcontrol";
 import Parallax from "components/blog/parallax";
 import Greeting from "components/blog/greeting";
+import TableImageSize from "./table/TableImageSize";
 
 interface CustomLinkProps
   extends React.DetailedHTMLProps<
@@ -38,6 +39,7 @@ const MDXComponents = {
   SegmentedControl: SegmentedControl,
   Parallax: Parallax,
   Greeting: Greeting,
+  TableImage: TableImageSize,
 };
 
 export default MDXComponents;
