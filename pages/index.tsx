@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { allPosts, allProjects, Post } from ".contentlayer/generated";
+import { allPosts, Post } from ".contentlayer/generated";
 import { pick } from "@contentlayer/client";
 
 import Link from "components/Link";
@@ -55,11 +55,7 @@ export const getStaticProps: GetStaticProps = async () => {
     .filter((_, i) => i < 5)
     .map((post) => pick(post, ["slug", "title", "publishedAt", "image"]));
 
-  const projects = allProjects.map((post) =>
-    pick(post, ["slug", "title", "description", "time"])
-  );
-
   return {
-    props: { posts, projects },
+    props: { posts },
   };
 };
