@@ -1,0 +1,61 @@
+---
+title: "How to use NVM with Fish Shell"
+publishedAt: "2022-09-03"
+summary: "Use NVM with Fish Shell"
+tags: ["Fish", "Shell", "Terminal"]
+---
+
+[NVM](https://github.com/nvm-sh/nvm) doesn't support [Fish](https://github.com/fish-shell/fish-shell) shell.
+
+Fortunately, there is an easy way to fix that. We can install the [bass](https://github.com/edc/bass) plugin to use utilities written for Bash.
+
+Install bass using [fisher](https://github.com/jorgebucaran/fisher) (you can also use [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)).
+
+```shell
+fisher add edc/bass
+```
+
+Install nvm (check what's the latest version).
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+```
+
+Add fish function to `~/.config/fish/functions/nvm.fish` to load nvm:
+
+```shell
+function nvm
+  bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
+```
+
+NVM is ready to use.
+
+---
+
+## How does it work?
+
+You can install a specific version of node (and have multiple versions in your system):
+
+```shell
+nvm install 16
+```
+
+List all installed node versions:
+
+```shell
+nvm ls
+```
+
+Select a specific version when you need it:
+
+```shell
+nvm use 16.13.0
+```
+
+---
+
+You can specify NodeJS version for your project and activate it using a single command:
+
+1. Create `.nvmrc` file inside your project with node version, like `16.13.0`.
+2. Use `nvm use` to active it.
