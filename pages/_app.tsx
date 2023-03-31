@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
 import { AppProps } from "next/app";
 import { useRouter } from "next/router";
-import { Inter } from "next/font/google";
+import { Inter } from "@next/font/google";
 
 import SEO from "components/seo";
 import * as gtag from "lib/gtag";
