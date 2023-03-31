@@ -1,7 +1,6 @@
 import { ReactElement, ReactNode, useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
-import Head from "next/head";
 import { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { Inter } from "@next/font/google";
@@ -12,6 +11,7 @@ import * as gtag from "lib/gtag";
 import "../styles/globals.css";
 import Header from "components/header";
 import { NextPage } from "next";
+import Meta from "components/Meta";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -62,9 +62,7 @@ export default function MyApp({
         }
       `}</style>
       <SEO />
-      <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <Meta />
       <div className="antialiased font-medium bg-primary text-primary width-full">
         <Header />
         {getLayout(<Component {...pageProps} />)}
