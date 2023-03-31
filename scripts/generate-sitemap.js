@@ -7,9 +7,11 @@ function addPage(page) {
   const route = path === "/index" ? "" : path;
 
   return `  <url>
-    <loc>${`https://blog.dianananda.site}${route}`}</loc>
-    <changefreq>hourly</changefreq>
-  </url>`;
+      <loc>${`https://blog.dianananda.site}${route}`}</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>hourly</changefreq>
+      <priority>1.0</priority>
+    </url>`;
 }
 
 async function generateSitemap() {
@@ -19,9 +21,10 @@ async function generateSitemap() {
     "!pages/_*.tsx",
     "!pages/api",
   ]);
-  const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(addPage).join("\n")}
-</urlset>`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    ${pages.map(addPage).join("\n")}
+    </urlset>`;
 
   fs.writeFileSync("public/sitemap.xml", sitemap);
 }
