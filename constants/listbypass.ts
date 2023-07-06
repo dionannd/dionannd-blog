@@ -62,7 +62,14 @@ export const dataListBypass: ListType[] = [
   },
   {
     name: "Alliance Shield on Galaxy Store",
-    image: "/icons/alliance-shield.png",
     link: "https://galaxystore.samsung.com/detail/com.rrivenllc.shieldx?session_id=W_0a719781bf2f739158262639f4c63d35",
+  },
+  {
+    name: "Files Shortcut on Galaxy Store",
+    link: "https://apps.samsung.com/appquery/appDetail.as?appId=org.aospstudio.files",
+  },
+  {
+    name: "OS13 on Galaxy Store",
+    link: "https://apps.samsung.com/appquery/appDetail.as?appId=com.launcher.os.launcher",
   },
 ];
