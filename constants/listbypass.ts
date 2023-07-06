@@ -6,6 +6,11 @@ type ListType = {
 
 export const dataListBypass: ListType[] = [
   {
+    name: "Galaxy Store",
+    image: "/icons/galaxy-store.png",
+    link: "intent://com.sec.android.app.samsungapps/#Intent;scheme=android-app;end",
+  },
+  {
     name: "Google Quick Search Box",
     image: "/icons/google-search.png",
     link: "intent://com.google.android.googlequicksearchbox/#Intent;scheme=android-app;end",
@@ -14,11 +19,6 @@ export const dataListBypass: ListType[] = [
     name: "Settings",
     image: "/icons/settings.png",
     link: "intent://com.android.settings/#Intent;scheme=android-app;end",
-  },
-  {
-    name: "Galaxy Store",
-    image: "/icons/galaxy-store.png",
-    link: "intent://com.sec.android.app.samsungapps/#Intent;scheme=android-app;end",
   },
   {
     name: "Screen Smartlock",
@@ -62,14 +62,60 @@ export const dataListBypass: ListType[] = [
   },
   {
     name: "Alliance Shield on Galaxy Store",
+    image: "/icons/alliance-shield.png",
     link: "https://galaxystore.samsung.com/detail/com.rrivenllc.shieldx?session_id=W_0a719781bf2f739158262639f4c63d35",
   },
   {
     name: "Files Shortcut on Galaxy Store",
+    image: "/icons/files-shortcut.png",
     link: "https://apps.samsung.com/appquery/appDetail.as?appId=org.aospstudio.files",
   },
+];
+
+export const dataListOtherBypass: ListType[] = [
   {
-    name: "OS13 on Galaxy Store",
-    link: "https://apps.samsung.com/appquery/appDetail.as?appId=com.launcher.os.launcher",
+    name: "ADB",
+    image: "/icons/adb.png",
+    link: "https://com.sec.android.app.modemui.activities.usb.settings/#Intent;scheme=android-app;end",
+  },
+  {
+    name: "USB Setting",
+    image: "/icons/usb-setting.png",
+    link: "https://com.sec.android.app.servicemodeapp/#Intent;scheme=promote_USBSettings_scheme;end",
+  },
+  {
+    name: "*#0*#",
+    image: "/icons/dialer-call.png",
+    link: "tel:*#0*#/#Intent;scheme=android-app;end",
+  },
+  {
+    name: "Google Maps",
+    image: "/icons/google-map.png",
+    link: "https://com.google.android.apps.maps/#Intent;scheme=android-app;end",
+  },
+  {
+    name: "Google Assistant",
+    image: "/icons/google-assistant.png",
+    link: "https://com.google.android.apps.googleassistant/#Intent;scheme=android-app;end",
+  },
+  {
+    name: "Gmail",
+    image: "/icons/gmail.png",
+    link: "https://com.google.android.gm/#Intent;scheme=android-app;end",
+  },
+  {
+    name: "Samsung Touch ID",
+    image: "/icons/touch-id.png",
+    link: "https://com.google.android.gm/#Intent;scheme=android-app;end",
+  },
+  {
+    name: "Samsung Dialer Call",
+    image: "/icons/dialer-call.png",
+    link: "https://com.samsung.android.dialer/#Intent;scheme=android-app;end",
+  },
+  {
+    name: "Mi File Manager",
+    image: "/icons/mi-file-manager.png",
+    link: "https://com.mi.android.globalfileexplorer/#Intent;scheme=android-app;end",
   },
 ];
